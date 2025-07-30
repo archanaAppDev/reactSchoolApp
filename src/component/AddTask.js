@@ -5,7 +5,6 @@ export const AddTask = ({ taskList, setTaskList, task, setTask }) => {
 
         event.preventDefault();
         if (task.id) {
-            const date = new Date();
             const updatedTask = taskList.map(t => t.id === task.id ? { ...t, name: event.target.task.value } : t);
             setTaskList(updatedTask);
             setTask({});
